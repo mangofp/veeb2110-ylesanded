@@ -26,6 +26,11 @@ let ylesanded = [
 ]
 
 function naitaYlesandeid(req, res) {
+  console.log(req.query.ylesanne)
+  ylesanded.push({
+    kirjeldus: req.query.ylesanne,
+    tehtud: false
+  })
   res.render('pages/ylesanded.ejs', {ylesanded: ylesanded})
 }
 
